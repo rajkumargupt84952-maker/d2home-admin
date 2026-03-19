@@ -1,0 +1,53 @@
+@media only screen and (min-width:300px) and (max-width:1200px)
+{
+.mt-smc-2
+{
+    margin-top: 1.5rem;
+}
+#footer {
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.min-10,.order-status th
+{
+    min-width: 10em;
+}
+.header-nav
+{
+  min-width: 70%;
+}
+.content-wrapper {
+  padding:0px;
+}
+.profile .nav-tabs .nav-link {
+ font-size: 12px;
+ }
+  .notifications.show
+  {
+    transform: translate3d(9.727px, 50.9091px, 0px)!important;
+  }
+  .sipstpswp .dataTable tr th:nth-child(3),.sipstpswp .dataTable tr th:nth-child(2),.transaction .dataTable tr th:nth-child(3) ,.transaction .dataTable tr th:nth-child(2) ,.portfolio tr th,.foliod tr th, .portfolio .dataTable tr th,.taxsaving .dataTable tr th:nth-child(1),.taxsaving .dataTable tr th:nth-child(2),.sipstpswp .dataTable tr th:nth-child(1), .sipstpswp .dataTable tr th:nth-child(5),.clientmap .dataTable tr th:nth-child(2),.clientmap .dataTable tr th:nth-child(4),.clientmap .dataTable tr th:nth-child(5)
+  {
+    min-width: 144px;
+  }
+  .sipstpswp .dataTable tr th:nth-child(4),.clientmap .dataTable tr th:nth-child(3),.taxsaving .dataTable tr th:nth-child(4)
+  {
+    min-width: 300px;
+  }
+  .clientmap .dataTable tr th:nth-child(1)
+  {
+    min-width: 70px;
+  } 
+  .portfolio .dataTable tr th:nth-child(1)
+  {
+    min-width:300px;
+  }  
+  .table>:not(caption)>*>* {
+    font-size: 15px;
+    padding: 18px 0px ;   
+    text-align: center;
+}
+}
+

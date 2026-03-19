@@ -1,0 +1,48 @@
+/* Container styling */
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Bell button styling */
+.notification-bell {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 0;
+}
+
+.bell-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Notification dot */
+.notification-dot {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+    left: 200px;
+}
+
+/* Bell shake animation */
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.bell-animate {
+  animation: ring 0.5s ease-in-out;
+}
