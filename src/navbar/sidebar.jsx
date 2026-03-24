@@ -72,6 +72,18 @@ const Sidebar = () => {
               <span className="menu-title">User list</span>
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/orders"
+              activeClassName="nav-link"
+              className="d-flex nav-link-c"
+            >
+              <span className="menu-icon">
+                <FaHome />
+              </span>
+              <span className="menu-title">Orders</span>
+            </NavLink>
+          </li>
 
         
         </ul>

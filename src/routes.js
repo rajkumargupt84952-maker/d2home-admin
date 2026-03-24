@@ -5,7 +5,7 @@ import {useEffect } from "react";
 import UserList from "./page/User-list";
 import ProductList from "./page/Product-list";
 import CategoryList from "./page/Category-list";
-
+import Orders from "./page/Orders";
 
 const AppRoutes = () => {
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ const AppRoutes = () => {
       <Route path="/product-list" element={<ProductList />} />
       <Route path="/category-list" element={<CategoryList />} />
       <Route path="/user-list" element={<UserList />} />
+      <Route path="/orders" element={<Orders />} />
     </Routes>
   );
 };
