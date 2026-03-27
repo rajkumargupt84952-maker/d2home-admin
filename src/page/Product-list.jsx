@@ -1,6 +1,6 @@
 import {  useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
-import { api } from "../url";
+import { api, baseUrl } from "../url";
 import { MDBDataTable } from "mdbreact";
 import ProductsForm from "../components/ProductForm";
 import { getRequest } from "../set-apis";
@@ -36,6 +36,12 @@ const ProductList = () => {
         sort: "asc",
         width: 150,
       },
+       {
+        label: "Image",
+        field: "productImage",
+        sort: "asc",
+        width: 150,
+      },
     
     ],
     rows: orderList,
@@ -49,8 +55,25 @@ const ProductList = () => {
     try {
       const response = await getRequest(api.getAllProducts);
       console.log(response.data.data);
-      
-      setOrderList(response.data.data);
+      const productsWithImages = response.data.data.map((product) => {
+        return {
+          ...product,
+          productImage: (
+            <div style={{ display: "flex", gap: "5px", flexWrap: "wrap", width: "150px" }}>
+              {Array.isArray(product.productImage) && product.productImage.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${baseUrl.replace('api/', '')}uploads/${img}`}
+                  alt="product"
+                  style={{ width: "40px", height: "40px", objectFit: "cover", borderRadius: "4px", border: "1px solid #ddd" }}
+                />
+              ))}
+            </div>
+          ),
+        };
+      });
+
+      setOrderList(productsWithImages);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
